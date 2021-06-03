@@ -1,0 +1,39 @@
+<button type="button" (click)="toggleEmployees()" class="btn btn-primary"> {{showAll ? 'Hide' : 'Show'}} All
+  Employee</button>
+<br />
+<br />
+<div *ngIf="!showAll">
+  <button type="button" (click)="nextEmployee()" class="btn btn-primary">Show Next Employee</button>
+  <br /><br />
+  <div (click)="onClick(displayEmployee.id)" class="pointerCursor">
+    <app-display-employee [employee]="displayEmployee" [employeeId]="displayEmployee.id">
+    </app-display-employee>
+  </div>
+</div>
+<div *ngIf="selectedEmployee">
+  <h3>{{ 'Output Property: ' + selectedEmployee?.id + ':-' + selectedEmployee.name}}</h3>
+</div>
+<h3 #h3Variable></h3>
+<div *ngIf="showAll">
+  <div class="form-group">
+    <button type="button" (click)="changeEmployeename()" class="form-control" class="btn btn-primary">Change Employee
+      Name</button>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" style="width: 500px" placeholder="Serch Employee Name"
+      [(ngModel)]="searchTerm">
+  </div>
+  <div *ngFor="let employee of employees | employeeFilter: searchTerm" (mousemove)="onMouseMove()">
+    <!-- (click)="h3Variable.innerHTML = chieldCoponent.getEmployeeNameAndGender()" to bind to chield public methods-->
+    <div
+      (click)="h3Variable.innerHTML = 'Template Reference Variable: ' + chieldCoponent.employee.name + ' : ' + chieldCoponent.employee.gender">
+      <div (click)="onClick(employee.id)" class="pointerCursor">
+        <app-display-employee [employee]="employee" (notify)="handelChieldData($event)" #chieldCoponent>
+        </app-display-employee>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="error">
+  {{error}}
+</div>

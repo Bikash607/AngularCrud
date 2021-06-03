@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Mikel",
+      "gender": "Male",
+      "email": "mike@gmail.com",
+      "phoneNumber": 48490202935,
+      "dateOfBirth": "01/01/1993",
+      "contactPreference": "Phone",
+      "department": "105",
+      "isActive": true,
+      "imagePath": "assets/images/Image01.png",
+      "password": "Mike123",
+      "confirmPassword": "Mike123"
+    },
+    {
+      "id": 2,
+      "name": "Paul",
+      "gender": "Male",
+      "email": "Paul@gmail.com",
+      "phoneNumber": 48490567935,
+      "dateOfBirth": "05/01/1988",
+      "contactPreference": "Email",
+      "department": "104",
+      "isActive": true,
+      "imagePath": "assets/images/Image02.png",
+      "password": "Paul123",
+      "confirmPassword": "Paul123"
+    },
+    {
+      "id": 3,
+      "name": "Jenny",
+      "gender": "Female",
+      "email": "Jenny@gmail.com",
+      "phoneNumber": 53290202935,
+      "dateOfBirth": "12/08/1990",
+      "contactPreference": "Phone",
+      "department": "103",
+      "isActive": true,
+      "imagePath": "assets/images/Image03.png",
+      "password": "Jenny123",
+      "confirmPassword": "Jenny123"
+    },
+    {
+      "id": 4,
+      "name": "Kety",
+      "gender": "Female",
+      "email": "Kety@gmail.com",
+      "phoneNumber": 58490202935,
+      "dateOfBirth": "10/09/2001",
+      "contactPreference": "Email",
+      "department": "105",
+      "isActive": true,
+      "imagePath": "assets/images/Image04.png",
+      "password": "Kety123",
+      "confirmPassword": "Kety123"
+    },
+    {
+      "id": 5,
+      "name": "Ben",
+      "gender": "Male",
+      "department": "102",
+      "email": "ben@outlook.com",
+      "phoneNumber": "6843012345",
+      "contactPreference": "Phone",
+      "dateOfBirth": "1980-05-01T18:30:00.000Z",
+      "isActive": true,
+      "imagePath": "assets/images/Image01.png",
+      "password": "ccc",
+      "confirmPassword": "ccc"
+    }
+  ]
+}

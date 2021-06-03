@@ -1,0 +1,11 @@
+.imageClass{
+  height: 200px;
+  widows: 200px;
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #ec1414;
+}

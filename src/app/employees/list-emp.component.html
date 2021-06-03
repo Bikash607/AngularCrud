@@ -1,0 +1,31 @@
+<h3>All Employees</h3>
+<button type="button" (click)="toggleEmployees()" class="btn btn-primary"> {{showAll ? 'Hide' : 'Show'}} All
+  Employee</button>
+<br />
+<br />
+<div *ngIf="!showAll">
+  <button type="button" (click)="nextEmployee()" class="btn btn-primary">Show Next Employee</button>
+  <br /><br />
+  <div (click)="onClick(displayEmployee.id)" class="pointerCursor">
+    <app-display-employee [employee]="displayEmployee" [employeeId]="displayEmployee.id">
+    </app-display-employee>
+  </div>
+</div>
+<div *ngIf="selectedEmployee">
+  <h3>{{ 'Output Property: ' + selectedEmployee?.id + ':-' + selectedEmployee.name}}</h3>
+</div>
+<h3 #h3Variable></h3>
+<div *ngIf="showAll">
+  <div class="form-group">
+    <input type="text" class="form-control" style="width: 500px" placeholder="Serch Employee Name"
+      [(ngModel)]="searchTerm">
+  </div>
+  <div *ngFor="let employee of filterdEmployee">
+    <!-- (click)="h3Variable.innerHTML = chieldCoponent.getEmployeeNameAndGender()" to bind to chield public methods-->
+    <div
+      (click)="h3Variable.innerHTML = 'Template Reference Variable: ' + chieldCoponent.employee.name + ' : ' + chieldCoponent.employee.gender">
+      <app-display-emp [employee]="employee" (notify)="handelChieldData($event)" (notifyDelete)="onDeleteNotification($event)" [searchTerm]="searchTerm" #chieldCoponent>
+      </app-display-emp>
+    </div>
+  </div>
+</div>

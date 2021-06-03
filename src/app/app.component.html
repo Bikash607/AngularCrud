@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li>
+        <a routerLink="home">Home</a>
+      </li>
+      <li>
+        <a routerLink="list">List</a>
+      </li>
+      <li>
+        <a routerLink="employees">All Employees</a>
+      </li>
+      <li>
+        <a routerLink="edit/0">Create/Edit</a>
+      </li>
+      <li>
+        <a [routerLink]="['employee', 2]">Get Employee with ID 2</a>
+      </li>
+    </ul>
+  </div>
+  <div class="lds-roller" *ngIf="showLoader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  <router-outlet></router-outlet>
+</div>
